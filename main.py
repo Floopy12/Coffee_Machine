@@ -39,4 +39,3 @@ irish = Coffee('Irish Coffee', ingredients = {'Water' : 1, 'Coffee' : 1, 'Whiske
 
 simple_machine = Coffee_Machine('Simple_Machine', [latte, cappuccino, espresso, americano, irish], ingredients = {'Water' : 20, 'Coffee' : 20, 'Milk' : 15, 'Wiskey' : 5})
 
-simple_machine.minus_ing(americano)
