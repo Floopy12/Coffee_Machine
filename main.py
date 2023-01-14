@@ -22,6 +22,7 @@ class Coffee_Machine:
         print(f'Готовлю {your_pick.name}. До приготовления {sec} секунд.')
         countdown(sec)
         print(f'Ваш {your_pick.name} готов.\nМожете забрать стаканчик.')
+
         
 
 class Coffee:
@@ -30,12 +31,12 @@ class Coffee:
         self.ingredients = ingredients
     
 
-latte = Coffee('Latte', {'Water : 1', 'Coffee : 1', 'Milk : 1'})
-cappuccino = Coffee('Cappuccino', {'Water : 1', 'Coffee : 2' 'Milk : 1'})
-americano = Coffee('Americano', {'Water : 1', 'Coffee : 1'})
-espresso = Coffee('Espresso', {'Water : 1', 'Coffee : 1'})
-irish = Coffee('Irish Coffee', {'Water : 1', 'Coffee : 1', 'Whiskey : 1'})
+latte = Coffee('Latte', ingredients = {'Water' : 1, 'Coffee' : 1, 'Milk' : 1})
+cappuccino = Coffee('Cappuccino', ingredients = {'Water' : 1, 'Coffee' : 2, 'Milk' : 1})
+americano = Coffee('Americano', ingredients = {'Water' : 1, 'Coffee' : 1})
+espresso = Coffee('Espresso', ingredients = {'Water' : 1, 'Coffee' : 1})
+irish = Coffee('Irish Coffee', ingredients = {'Water' : 1, 'Coffee' : 1, 'Whiskey' : 1})
 
-simple_machine = Coffee_Machine('Simple_Machine', [latte, cappuccino, espresso, americano, irish], ingredients = {'Water : 20', 'Coffee : 20', 'Milk : 15', 'Wiskey : 5'})
+simple_machine = Coffee_Machine('Simple_Machine', [latte, cappuccino, espresso, americano, irish], ingredients = {'Water' : 20, 'Coffee' : 20, 'Milk' : 15, 'Wiskey' : 5})
 
-simple_machine.pick_coffee(4)
+simple_machine.minus_ing(americano)
