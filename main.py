@@ -9,18 +9,14 @@ class Coffee_Machine:
     #Доступные виды кофе 
     def available_coffee(self):
         print(f'Автомат может приготовить: ')
-        s = 0
-        for type in self.types_coffee:
-            s += 1
-            print(f'{s} {type.name}')
+        for index, type in enumerate(self.types_coffee):
+            print(f'{index} {type.name}')
         print(f'Ингридиенты в наличии: {self.ingredients}')
 
     #Выбор кофе
     def pick_coffee(self, sec):
-        q = -1
-        for type in self.types_coffee:
-            q += 1
-            print(f'{q} {type.name}')
+        for index, type in enumerate(self.types_coffee):
+            print(f'{index} {type.name}')
         pick = input(f'Выбирите номер кофе из списка: ')
         your_pick = self.types_coffee[int(pick)]
         print(f'Готовлю {your_pick.name}. До приготовления {sec} секунд.')
@@ -42,4 +38,4 @@ irish = Coffee('Irish Coffee', {'Water : 1', 'Coffee : 1', 'Whiskey : 1'})
 
 simple_machine = Coffee_Machine('Simple_Machine', [latte, cappuccino, espresso, americano, irish], ingredients = {'Water : 20', 'Coffee : 20', 'Milk : 15', 'Wiskey : 5'})
 
-simple_machine.available_coffee()
+simple_machine.pick_coffee(4)
